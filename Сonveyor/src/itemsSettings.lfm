@@ -1,0 +1,114 @@
+object Form4: TForm4
+  Left = 1175
+  Height = 166
+  Top = 123
+  Width = 350
+  Caption = 'Детали'
+  ClientHeight = 166
+  ClientWidth = 350
+  Constraints.MaxHeight = 166
+  Constraints.MaxWidth = 350
+  Constraints.MinHeight = 166
+  Constraints.MinWidth = 350
+  OnHide = FormHide
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object Label1: TLabel
+    Left = 87
+    Height = 15
+    Top = 16
+    Width = 54
+    Caption = 'Деталь #1'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 87
+    Height = 15
+    Top = 48
+    Width = 54
+    Caption = 'Деталь #2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 87
+    Height = 15
+    Top = 80
+    Width = 54
+    Caption = 'Деталь #3'
+    ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    Left = 151
+    Height = 23
+    Top = 8
+    Width = 100
+    ItemHeight = 15
+    OnSelect = ComboBox1Select
+    TabOrder = 0
+  end
+  object ComboBox2: TComboBox
+    Left = 151
+    Height = 23
+    Top = 40
+    Width = 100
+    ItemHeight = 15
+    OnSelect = ComboBox2Select
+    TabOrder = 1
+  end
+  object ComboBox3: TComboBox
+    Left = 151
+    Height = 23
+    Top = 72
+    Width = 100
+    ItemHeight = 15
+    OnSelect = ComboBox3Select
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 256
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Отмена'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 176
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Применить'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 96
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Ок'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+  object StaticText1: TStaticText
+    Left = 72
+    Height = 17
+    Top = 104
+    Width = 225
+    Caption = 'Необходимо выбрать разные детали'
+    Font.Color = clRed
+    ParentFont = False
+    TabOrder = 6
+    Visible = False
+  end
+  object Button4: TButton
+    Left = 16
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Случайно'
+    OnClick = Button4Click
+    TabOrder = 7
+  end
+end

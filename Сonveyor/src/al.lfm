@@ -1,0 +1,80 @@
+object Form5: TForm5
+  Left = 714
+  Height = 130
+  Top = 205
+  Width = 265
+  Caption = 'Шанс АЛ'
+  ClientHeight = 130
+  ClientWidth = 265
+  Constraints.MaxHeight = 130
+  Constraints.MaxWidth = 265
+  Constraints.MinHeight = 130
+  Constraints.MinWidth = 265
+  OnHide = FormHide
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 8
+    Width = 150
+    Caption = 'Возможное значение 0-100'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 176
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Отмена'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 96
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Применить'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 16
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Ок'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 16
+    Height = 23
+    Top = 32
+    Width = 48
+    MaxLength = 3
+    OnChange = Edit1Change
+    OnKeyPress = Edit1KeyPress
+    TabOrder = 3
+  end
+  object StaticText1: TStaticText
+    Left = 16
+    Height = 17
+    Top = 64
+    Width = 161
+    Caption = 'Введите число от 0 до 100'
+    Font.Color = clRed
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 176
+    Height = 25
+    Top = 64
+    Width = 75
+    Caption = 'Случайно'
+    OnClick = Button4Click
+    TabOrder = 5
+  end
+end

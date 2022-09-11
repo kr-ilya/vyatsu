@@ -1,0 +1,214 @@
+object Form3: TForm3
+  Left = 564
+  Height = 218
+  Top = 235
+  Width = 260
+  Caption = 'Заполнение ящиков'
+  ClientHeight = 218
+  ClientWidth = 260
+  Constraints.MaxHeight = 218
+  Constraints.MaxWidth = 260
+  Constraints.MinHeight = 218
+  Constraints.MinWidth = 260
+  OnHide = FormHide
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 32
+    Width = 47
+    Caption = 'Ящик #1'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 47
+    Caption = 'Ящик #2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 96
+    Width = 47
+    Caption = 'Ящик #3'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 15
+    Top = 128
+    Width = 47
+    Caption = 'Ящик #4'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 15
+    Top = 160
+    Width = 47
+    Caption = 'Ящик #5'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 136
+    Height = 15
+    Top = 32
+    Width = 47
+    Caption = 'Ящик #6'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 136
+    Height = 15
+    Top = 64
+    Width = 47
+    Caption = 'Ящик #7'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 136
+    Height = 15
+    Top = 96
+    Width = 47
+    Caption = 'Ящик #8'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 136
+    Height = 15
+    Top = 128
+    Width = 47
+    Caption = 'Ящик #9'
+    ParentColor = False
+  end
+  object SpinEdit1: TSpinEdit
+    Left = 72
+    Height = 23
+    Top = 24
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit1KeyPress
+    TabOrder = 0
+  end
+  object SpinEdit2: TSpinEdit
+    Left = 72
+    Height = 23
+    Top = 56
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit2KeyPress
+    TabOrder = 1
+  end
+  object SpinEdit3: TSpinEdit
+    Left = 72
+    Height = 23
+    Top = 88
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit3KeyPress
+    TabOrder = 2
+  end
+  object SpinEdit4: TSpinEdit
+    Left = 72
+    Height = 23
+    Top = 120
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit4KeyPress
+    TabOrder = 3
+  end
+  object SpinEdit5: TSpinEdit
+    Left = 72
+    Height = 23
+    Top = 152
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit5KeyPress
+    TabOrder = 4
+  end
+  object SpinEdit6: TSpinEdit
+    Left = 192
+    Height = 23
+    Top = 24
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit6KeyPress
+    TabOrder = 5
+  end
+  object SpinEdit7: TSpinEdit
+    Left = 192
+    Height = 23
+    Top = 56
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit7KeyPress
+    TabOrder = 6
+  end
+  object SpinEdit8: TSpinEdit
+    Left = 192
+    Height = 23
+    Top = 88
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit8KeyPress
+    TabOrder = 7
+  end
+  object SpinEdit9: TSpinEdit
+    Left = 192
+    Height = 23
+    Top = 120
+    Width = 50
+    MaxValue = 4
+    OnKeyPress = SpinEdit9KeyPress
+    OnMouseDown = SpinEdit9MouseDown
+    TabOrder = 8
+  end
+  object Button1: TButton
+    Left = 167
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Отмена'
+    OnClick = Button1Click
+    TabOrder = 9
+  end
+  object Button2: TButton
+    Left = 88
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Применить'
+    OnClick = Button2Click
+    TabOrder = 10
+  end
+  object Button3: TButton
+    Left = 8
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Ок'
+    OnClick = Button3Click
+    TabOrder = 11
+  end
+  object Label10: TLabel
+    Left = 56
+    Height = 15
+    Top = 0
+    Width = 143
+    Caption = 'Возможные значения: 0-4'
+    ParentColor = False
+  end
+  object Button4: TButton
+    Left = 168
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'Случайно'
+    OnClick = Button4Click
+    TabOrder = 12
+  end
+end

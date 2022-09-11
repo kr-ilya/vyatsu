@@ -1,0 +1,222 @@
+object Form1: TForm1
+  Left = 116
+  Height = 700
+  Top = 29
+  Width = 1250
+  Caption = 'Конвейер'
+  ClientHeight = 680
+  ClientWidth = 1250
+  Constraints.MaxHeight = 700
+  Constraints.MaxWidth = 1250
+  Constraints.MinHeight = 700
+  Constraints.MinWidth = 1250
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.0.12.0'
+  object Image1: TImage
+    Left = 0
+    Height = 680
+    Top = 0
+    Width = 1250
+    Align = alClient
+  end
+  object Button1: TButton
+    Left = 952
+    Height = 25
+    Top = 536
+    Width = 75
+    Caption = 'Старт'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object TrackBar1: TTrackBar
+    Left = 424
+    Height = 25
+    Top = 520
+    Width = 212
+    Max = 100
+    OnChange = TrackBar1Change
+    Position = 10
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 640
+    Height = 23
+    Top = 520
+    Width = 40
+    MaxLength = 3
+    OnChange = Edit1Change
+    OnKeyPress = Edit1KeyPress
+    TabOrder = 2
+    Text = '10'
+  end
+  object StaticText1: TStaticText
+    Left = 432
+    Height = 17
+    Top = 560
+    Width = 168
+    Caption = 'Введите число от 0 до 100!'
+    TabOrder = 3
+    Visible = False
+  end
+  object Button2: TButton
+    Left = 952
+    Height = 25
+    Top = 568
+    Width = 75
+    Caption = 'Пауза'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 952
+    Height = 25
+    Top = 600
+    Width = 75
+    Caption = 'Выход'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+  object StaticText2: TStaticText
+    Left = 416
+    Height = 49
+    Top = 280
+    Width = 352
+    Caption = 'Работа завершена!'
+    Font.Color = clRed
+    Font.Height = 50
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    Visible = False
+  end
+  object Memo1: TMemo
+    Left = 728
+    Height = 90
+    Top = 512
+    Width = 150
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 7
+    Visible = False
+  end
+  object StaticText3: TStaticText
+    Left = 432
+    Height = 17
+    Top = 496
+    Width = 65
+    Caption = 'Скорость'
+    TabOrder = 8
+  end
+  object StaticText4: TStaticText
+    Left = 432
+    Height = 17
+    Top = 584
+    Width = 65
+    Caption = 'Шанс АЛ'
+    TabOrder = 9
+  end
+  object TrackBar2: TTrackBar
+    Left = 424
+    Height = 25
+    Top = 608
+    Width = 212
+    Max = 100
+    OnChange = TrackBar2Change
+    Position = 20
+    TabOrder = 10
+  end
+  object Edit2: TEdit
+    Left = 640
+    Height = 23
+    Top = 608
+    Width = 40
+    MaxLength = 3
+    OnChange = Edit2Change
+    OnKeyPress = Edit2KeyPress
+    TabOrder = 11
+    Text = '20'
+  end
+  object StaticText5: TStaticText
+    Left = 432
+    Height = 17
+    Top = 640
+    Width = 168
+    Caption = 'Введите число от 0 до 100!'
+    TabOrder = 12
+    Visible = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 968
+    Top = 112
+  end
+  object MainMenu1: TMainMenu
+    Left = 176
+    Top = 96
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem2: TMenuItem
+        Caption = 'Открыть'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Выход'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Настройки'
+      object MenuItem6: TMenuItem
+        Caption = 'Цвета'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Детали'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Заполнение ящиков'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Шанс АЛ'
+        OnClick = MenuItem10Click
+      end
+      object MenuItem11: TMenuItem
+        Caption = 'Сброс настроек'
+        OnClick = MenuItem11Click
+      end
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'Справка'
+      object MenuItem12: TMenuItem
+        Caption = 'О программе'
+        OnClick = MenuItem12Click
+      end
+      object MenuItem13: TMenuItem
+        Caption = 'Об авторе'
+        OnClick = MenuItem13Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'JSON|*.json'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 248
+    Top = 96
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 304
+    Top = 96
+  end
+end
