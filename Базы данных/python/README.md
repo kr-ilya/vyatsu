@@ -2,6 +2,14 @@
 
 ## Info 
 
+python 3.7+
+
+Установка  
+
+```sh
+pip install -r requirements.txt
+```
+
 Переменные окружения 
 
 (create .env file) 
