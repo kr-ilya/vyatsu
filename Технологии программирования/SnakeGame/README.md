@@ -5,4 +5,4 @@
 
  Диаграмма классов 
 
-![Class diagram](https://habrastorage.org/webt/py/rb/mg/pyrbmgximtgznz72j1d0fupp8ak.png)
+![Class diagram](https://habrastorage.org/webt/xk/18/6f/xk186friwnv8s8eljuuk85rekxg.png)
