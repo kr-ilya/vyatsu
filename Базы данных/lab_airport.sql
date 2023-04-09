@@ -23,6 +23,10 @@ SET row_security = off;
 -- Name: lab_airport; Type: DATABASE; Schema: -; Owner: postgres
 --
 
+
+CREATE USER lab_air_user WITH PASSWORD 'lab_air_user';
+ALTER ROLE lab_air_user superuser;
+
 CREATE DATABASE lab_airport WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.UTF-8';
 
 
