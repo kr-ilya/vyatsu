@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" modified="2024-06-09T15:16:14.512Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 YaBrowser/24.4.0.0 Safari/537.36" etag="c1wWK8hCDgyotMAfCtLD" version="24.5.2" type="device" pages="3">
+  <diagram name="модульная структура серверной части" id="wd3JTw_-iUPhZEDqdR7K">
+    <mxGraphModel dx="1434" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-1" value="Сервис пользователя" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="bEOkkp5AiUIgxh25hnBp-2" target="bEOkkp5AiUIgxh25hnBp-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="bEOkkp5AiUIgxh25hnBp-2" target="bEOkkp5AiUIgxh25hnBp-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-2" value="Сервис ботов" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="bEOkkp5AiUIgxh25hnBp-4" target="bEOkkp5AiUIgxh25hnBp-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-4" value="Сервис, обслуживающий ботов (worker)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-6" value="Модуль компонентов" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="bEOkkp5AiUIgxh25hnBp-9" target="bEOkkp5AiUIgxh25hnBp-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bEOkkp5AiUIgxh25hnBp-9" value="&lt;b&gt;&lt;i&gt;Модуль интерпретации DSL&lt;/i&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;shadow=0;shadowBlur=5;" parent="1" vertex="1">
+          <mxGeometry x="400" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="EWUNhMLrToI4P4ATNzyr" name="интерпретатор">
+    <mxGraphModel dx="1434" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.045;entryY=0.009;entryDx=0;entryDy=0;startArrow=classic;startFill=1;entryPerimeter=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-2" target="eo1MuuTuOxcsI09xDgh6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-2" value="Лексический анализатор" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="128" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="eo1MuuTuOxcsI09xDgh6-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="28" y="220" as="sourcePoint" />
+            <mxPoint x="78" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-4" value="Исходный код" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="18" y="190" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-6" target="eo1MuuTuOxcsI09xDgh6-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="220" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-6" value="Синтаксический анализатор" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="348" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-2" target="eo1MuuTuOxcsI09xDgh6-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="318" y="280" as="sourcePoint" />
+            <mxPoint x="368" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-8" value="Токен" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="268" y="176" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-6" target="eo1MuuTuOxcsI09xDgh6-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="378" y="310" as="sourcePoint" />
+            <mxPoint x="428" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-10" value="Запрос токена" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="248" y="238" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-11" value="Таблица символов" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="340" width="640" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-13" target="eo1MuuTuOxcsI09xDgh6-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-13" value="Семантический анализатор" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.719;exitY=-0.011;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitPerimeter=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-11" target="eo1MuuTuOxcsI09xDgh6-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="418" y="350" as="sourcePoint" />
+            <mxPoint x="418" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-15" value="Исполнитель&lt;div&gt;(evaluator)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-16" value="AST" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.388;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-6" target="eo1MuuTuOxcsI09xDgh6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.969;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="eo1MuuTuOxcsI09xDgh6-15" target="eo1MuuTuOxcsI09xDgh6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eo1MuuTuOxcsI09xDgh6-21" value="Выходные данные" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="850" y="190" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="kZnJk4m3QoYkNaVNsMDc" name="astRawCmd">
+    <mxGraphModel dx="2390" dy="2487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tS0JBlR8roaUAl35VZ3l-1" value="&lt;p class=&quot;Code&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-485" width="20" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tS0JBlR8roaUAl35VZ3l-3" value="(*ast.ExpressionStatement)({&#xa;|       Token: (token.Token) {&#xa;|       |       Type: (string) (len=3) &quot;INT&quot;,&#xa;|       |       Literal: (string) (len=1) &quot;5&quot;&#xa;|       },&#xa;|       Expression: (*ast.InfixExpression)({&#xa;|       |       Token: (token.Token) {&#xa;|       |       |       Type: (string) (len=1) &quot;+&quot;,&#xa;|       |       |       Literal: (string) (len=1) &quot;+&quot;&#xa;|       |       },&#xa;|       |       Left: (*ast.IntegerLiteral)({&#xa;|       |       |       Token: (token.Token) {&#xa;|       |       |       |       Type: (string) (len=3) &quot;INT&quot;,&#xa;|       |       |       |       Literal: (string) (len=1) &quot;5&quot;&#xa;|       |       |       },&#xa;|       |       |       Value: (int64) 5&#xa;|       |       }),&#xa;|       |       Operator: (string) (len=1) &quot;+&quot;,&#xa;|       |       Right: (*ast.InfixExpression)({&#xa;|       |       |       Token: (token.Token) {&#xa;|       |       |       |       Type: (string) (len=1) &quot;/&quot;,&#xa;|       |       |       |       Literal: (string) (len=1) &quot;/&quot;&#xa;|       |       |       },&#xa;|       |       |       Left: (*ast.InfixExpression)({&#xa;|       |       |       |       Token: (token.Token) {&#xa;|       |       |       |       |       Type: (string) (len=1) &quot;*&quot;,&#xa;|       |       |       |       |       Literal: (string) (len=1) &quot;*&quot;        &#xa;|       |       |       |       },&#xa;|       |       |       |       Left: (*ast.IntegerLiteral)({&#xa;|       |       |       |       |       Token: (token.Token) {&#xa;|       |       |       |       |       |       Type: (string) (len=3) &quot;INT&quot;,&#xa;|       |       |       |       |       |       Literal: (string) (len=1) &quot;1&quot;&#xa;|       |       |       |       |       },&#xa;|       |       |       |       |       Value: (int64) 1&#xa;|       |       |       |       }),&#xa;|       |       |       |       Operator: (string) (len=1) &quot;*&quot;,&#xa;|       |       |       |       Right: (*ast.IntegerLiteral)({&#xa;|       |       |       |       |       Token: (token.Token) {&#xa;|       |       |       |       |       |       Type: (string) (len=3) &quot;INT&quot;,&#xa;|       |       |       |       |       |       Literal: (string) (len=1) &quot;2&quot;&#xa;|       |       |       |       |       },&#xa;|       |       |       |       |       Value: (int64) 2&#xa;|       |       |       |       })&#xa;|       |       |       }),&#xa;|       |       |       Operator: (string) (len=1) &quot;/&quot;,&#xa;|       |       |       Right: (*ast.InfixExpression)({&#xa;|       |       |       |       Token: (token.Token) {&#xa;|       |       |       |       |       Type: (string) (len=1) &quot;+&quot;,&#xa;|       |       |       |       |       Literal: (string) (len=1) &quot;+&quot;&#xa;|       |       |       |       },&#xa;|       |       |       |       Left: (*ast.IntegerLiteral)({&#xa;|       |       |       |       |       Token: (token.Token) {&#xa;|       |       |       |       |       |       Type: (string) (len=3) &quot;INT&quot;,&#xa;|       |       |       |       |       |       Literal: (string) (len=1) &quot;4&quot;&#xa;|       |       |       |       |       },&#xa;|       |       |       |       |       Value: (int64) 4&#xa;|       |       |       |       }),&#xa;|       |       |       |       Operator: (string) (len=1) &quot;+&quot;,&#xa;|       |       |       |       Right: (*ast.IntegerLiteral)({&#xa;|       |       |       |       |       Token: (token.Token) {&#xa;|       |       |       |       |       |       Type: (string) (len=3) &quot;INT&quot;,&#xa;|       |       |       |       |       |       Literal: (string) (len=1) &quot;9&quot;&#xa;|       |       |       |       |       },&#xa;|       |       |       |       |       Value: (int64) 9&#xa;|       |       |       |       })&#xa;|       |       |       })&#xa;|       |       })&#xa;|       })&#xa;})" style="text;whiteSpace=wrap;fontStyle=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-1130" width="410" height="1170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
