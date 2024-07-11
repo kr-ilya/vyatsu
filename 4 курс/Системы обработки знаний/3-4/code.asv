@@ -1,0 +1,4 @@
+plot(penguins(335, 1), penguins(335,2),'.r','MarkerSize',20)
+hold on
+
+net = selforgmap([6,6]);

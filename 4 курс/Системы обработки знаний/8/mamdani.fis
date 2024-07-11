@@ -1,0 +1,49 @@
+[System]
+Name='mamdani'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='x1'
+Range=[-6 5]
+NumMFs=3
+MF1='низкий':'trimf',[-10.58 -6 -1.417]
+MF2='средний':'trimf',[-5.083 -0.5 4.083]
+MF3='высокий':'trimf',[0.4167 5 9.583]
+
+[Input2]
+Name='x2'
+Range=[-6 4]
+NumMFs=3
+MF1='низкий':'trimf',[-10.17 -6 -1.833]
+MF2='средний':'trimf',[-5.167 -1 3.167]
+MF3='высокий':'trimf',[-0.1667 4 8.167]
+
+[Output1]
+Name='y'
+Range=[-150 150]
+NumMFs=5
+MF1='низкий':'gaussmf',[31.85 -150]
+MF2='ниже_среднего':'gaussmf',[31.85 -75]
+MF3='средний':'gaussmf',[31.85 -8.882e-16]
+MF4='выше_среднего':'gaussmf',[31.85 75]
+MF5='высокий':'gaussmf',[31.85 150]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 3 (1) : 1
+1 3, 2 (1) : 1
+2 1, 3 (1) : 1
+2 2, 3 (1) : 1
+2 3, 3 (1) : 1
+3 1, 5 (1) : 1
+3 2, 3 (1) : 1
+3 3, 4 (1) : 1

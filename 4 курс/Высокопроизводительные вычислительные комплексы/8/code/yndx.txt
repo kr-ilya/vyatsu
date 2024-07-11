@@ -1,0 +1,15 @@
+https://yandex.cloud/ru/docs/tutorials/testing/hpc-on-preemptible
+
+ip как хост не сработает - нужны имена (ex. localhost, master-node)
+
+
+mpirun -np 9 -host master-node:2,cl1d69rotlgnou0v8hsv-igil:2,cl1d69rotlgnou0v8hsv-yxit:2,cl1d69rotlgnou0v8hsv-ewih:3 main 4000
+
+
+g++ install:
+sudo apt -y install build-essential
+mpic++ main.cpp -O2 -o main
+
+mpirun -np 4 -host localhost:2,cl1d69rotlgnou0v8hsv-igil:2 main 960
+mpirun -np 9 -host localhost:2,cl1d69rotlgnou0v8hsv-igil:2,cl1d69rotlgnou0v8hsv-yxit:2,cl1d69rotlgnou0v8hsv-ewih:3 main 960
+mpirun -np 16 -host localhost:4,cl1d69rotlgnou0v8hsv-igil:4,cl1d69rotlgnou0v8hsv-yxit:4,cl1d69rotlgnou0v8hsv-ewih:4 main 960

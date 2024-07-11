@@ -1,0 +1,16 @@
+var
+ost: array of array of integer;
+i,j,t,z,n:integer;
+begin
+SetArrayLength(ost,ProcessCount);
+for i:= 0 to resourcecount-1 do setarraylength(ost[i],resourcecount);
+   for i:= 0 to processcount-1 do
+      for j:=0 to ResourceCount-1 do
+   begin
+   t:=max[i][j]-(received[i][j]+query[i][j]);
+   ost[i][j]:=t;
+   z:=query[i][j];
+     for n:=0 to processcount-1 do z:=z+received[n][j];
+       if ost[i][j]<=(Resources[j].Count-z) then permit[i][j]:=true;
+   end;
+end;
