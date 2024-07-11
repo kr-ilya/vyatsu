@@ -1,0 +1,48 @@
+svn checkout --username=kr-ilya https://svn.code.sf.net/p/rps-ivt/code/ rps-ivt-code
+
+mkdir trunk branches
+svn add trunk branches
+svn propset svn:ignore trunk/bin .
+
+#copy files fo trunk
+
+svn add --force .
+
+svn commit -m "Initial commit"
+svn update
+
+# change Decomposition.java (MAX_DATA_SIZE)
+
+svn commit -m "Change max data size"
+svn update
+
+svn log
+svn merge -r 2:1 .
+
+svn commit -m "Rollback last commit"
+svn update
+
+svn checkout --username=kr-ilya https://svn.code.sf.net/p/rps-ivt/code/ rps-ivt-code
+
+svn copy https://svn.code.sf.net/p/rps-ivt/code/trunk https://svn.code.sf.net/p/rps-ivt/code/branches/dev -m "Creating a branch of project"
+
+# change Decomposition.java (MAX_DATA_SIZE)
+svn commit -m "decrease max data size"
+
+
+svn switch https://svn.code.sf.net/p/rps-ivt/code/branches/dev
+
+# change Decomposition.java (MAX_DATA_SIZE)
+svn commit -m "increase max data size"
+
+svn switch https://svn.code.sf.net/p/rps-ivt/code/trunk
+
+
+svn merge https://svn.code.sf.net/p/rps-ivt/code/trunk@6 https://svn.code.sf.net/p/rps-ivt/code/branches/dev@6
+
+
+svn merge --reintegrate https://svn.code.sf.net/p/rps-ivt/code/branches/dev
+mc (reject incoming changes which conflict and accept the rest)
+svn update
+
+svn delete https://svn.code.sf.net/p/rps-ivt/code/branches/dev -m "Removing dev branch."

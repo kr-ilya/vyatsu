@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="Lab" default="build" basedir=".">
+
+    <property name="name" value="SqrtLab"/>
+    <property name="mainClass" value="rpslab.Main"/>
+    <property name="src.dir" location="${basedir}/src"/>
+    <property name="build" location="${basedir}/bin"/>
+    <property name="build.classes" location="${build}/classes"/>
+    <property name="build.jar" location="${build}/jar"/>
+    
+    <target name="clean" description="Removes all temporary files">
+        <delete dir="${build.classes}"/>
+        <delete dir="${build.jar}"/>
+    </target>
+
+    <target name="build" depends="clean" description="Builds the application">
+        <mkdir dir="${build.classes}"/>
+
+        <javac srcdir="${src.dir}"
+               destdir="${build.classes}"
+               debug="false"
+               deprecation="true"
+               optimize="true" >
+        </javac>
+    </target>
+
+    <target name="make-jar" depends="build" description="Make jar file">
+        <jar jarfile="${build.jar}/${name}.jar">
+            <fileset dir="${build.classes}"/>
+            <manifest>
+                <attribute name="Main-Class" value="${mainClass}"/>
+            </manifest>
+        </jar>
+
+        <copy file="${basedir}/input.txt" tofile="${build.jar}/input.txt"/>
+    </target>
+
+    <target name="run-jar" depends="make-jar" description="Run jar file">
+        <java dir="${build.jar}" 
+            jar="${build.jar}/${name}.jar"
+            fork="true"
+            classpath="${build.classes}" > 
+        </java>
+    </target>
+
+
+    <target name="run" depends="build" description="Run project">
+        <java classname="${mainClass}" 
+            dir="${basedir}" 
+            fork="true"
+            classpath="${build.classes}" > 
+        </java>
+    </target>
+    
+
+</project>
