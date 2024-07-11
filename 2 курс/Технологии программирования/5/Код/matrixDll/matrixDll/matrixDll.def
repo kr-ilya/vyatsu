@@ -1,0 +1,3 @@
+LIBRARY DiffDLL
+EXPORTS
+	get_trangle_matrix

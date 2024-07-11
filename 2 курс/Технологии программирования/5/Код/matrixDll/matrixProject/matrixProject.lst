@@ -1,0 +1,82 @@
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    04/12/22 15:11:58
+diagonal_sum.asm					     Page 1 - 1
+
+
+				.MODEL FLAT, C
+				public _get_sum
+ 00000000			.code 
+ 00000000				_get_sum PROC near
+ 00000000  55					push ebp
+ 00000001  8B EC				mov ebp, esp
+
+ 00000003  8B 75 08				mov esi, dword ptr [ebp+8] ; **martix
+ 00000006  8B 4D 0C				mov ecx, dword ptr [ebp+12] ; n
+
+						; i = 0 (esi)
+						; j = 0 (edx)
+
+ 00000009  8B 16				mov edx, [esi] ; matrix[i]
+ 0000000B  DD 02				fld qword ptr [edx] ; st(0) <- matrix[i][j]
+
+ 0000000D  B8 00000000				mov eax, 0 ; offset (matrix[i][j + offset])
+
+ 00000012  83 E9 01				sub ecx, 1 ;  n-1
+ 00000015  83 F9 00				cmp ecx, 0 ; ecx == 0?
+ 00000018  74 0F				JE the_end
+
+ 0000001A				L:
+ 0000001A  83 C6 04				add esi, 4 ; i + 1
+ 0000001D  83 C0 08				add eax, 8 ; offset + 1
+
+ 00000020  8B 16				mov edx, [esi] ; matrix[i]
+ 00000022  DD 04 02				fld qword ptr [edx+eax] ; st(0) <- matrix[i][j+offset]
+
+ 00000025  DE C1				FADDP st(1), st(0) ; st(0) = st(1) + st(0)
+
+ 00000027  E2 F1				loop L ; while, ecx -= 1
+
+ 00000029				the_end:
+ 00000029  5D					pop ebp
+ 0000002A  C3					RET
+ 0000002B				_get_sum ENDP
+				END
+Microsoft (R) Macro Assembler Version 14.29.30133.0	    04/12/22 15:11:58
+diagonal_sum.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000002B Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+_get_sum . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000002B Public C
+  L  . . . . . . . . . . . . . .	L Near	 0000001A _TEXT	
+  the_end  . . . . . . . . . . .	L Near	 00000029 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000001h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors
