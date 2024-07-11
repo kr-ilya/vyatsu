@@ -1,0 +1,4 @@
+$ cat .gitignore
+AbstractDevelop/bin/
+AbstractDevelop/obj/
+.vs/

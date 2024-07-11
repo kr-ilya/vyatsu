@@ -1,0 +1,17 @@
+System:
+a
+a -> b & c & d & e & f & m
+b -> j & h
+c -> l
+d -> k V (o & p)
+e -> (g & i) V p
+f -> r V q V l
+g -> j & q
+h -> (o V l) & p
+i -> j
+j -> k
+k -> (r V n) & p
+l -> o V p
+m -> p
+n -> q V r
+o -> q & p

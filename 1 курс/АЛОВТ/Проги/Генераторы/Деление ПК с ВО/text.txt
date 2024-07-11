@@ -1,0 +1,10 @@
+ 11101 -delitrl
+0 11011 vostanovlenie
+0 11000 -delitrl
+00 10110 vostanovlenie
+00 01110 -delitrl
+001 11110 -delitrl
+0010 11100 vostanovlenie
+0010 11010 -delitrl
+00100 11000 vostanovlenie
+00100 10010 -delitrl

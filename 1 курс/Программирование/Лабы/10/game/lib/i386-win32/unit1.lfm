@@ -1,0 +1,24 @@
+object Form1: TForm1
+  Left = 508
+  Height = 500
+  Top = 132
+  Width = 445
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 500
+  ClientWidth = 445
+  Constraints.MaxHeight = 500
+  Constraints.MaxWidth = 445
+  Constraints.MinHeight = 500
+  Constraints.MinWidth = 445
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object Image1: TImage
+    Left = 0
+    Height = 500
+    Top = 0
+    Width = 445
+    Align = alClient
+    AutoSize = True
+  end
+end

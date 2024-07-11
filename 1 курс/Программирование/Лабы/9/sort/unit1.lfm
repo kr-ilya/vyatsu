@@ -1,0 +1,145 @@
+object Form1: TForm1
+  Left = 509
+  Height = 480
+  Top = 153
+  Width = 640
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Сортировка'
+  ClientHeight = 480
+  ClientWidth = 640
+  Constraints.MaxHeight = 480
+  Constraints.MaxWidth = 640
+  Constraints.MinHeight = 480
+  Constraints.MinWidth = 640
+  LCLVersion = '2.0.12.0'
+  object Button1: TButton
+    Left = 24
+    Height = 41
+    Top = 400
+    Width = 176
+    Caption = 'Сгенерировать данные'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 457
+    Width = 640
+    BorderSpacing.CellAlignHorizontal = ccaCenter
+    Color = clGray
+    Panels = <>
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 232
+    Height = 41
+    Top = 400
+    Width = 176
+    Caption = 'Сортировать'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object StringGrid1: TStringGrid
+    Left = 24
+    Height = 272
+    Top = 48
+    Width = 592
+    ColCount = 6
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goAutoAddRows, goSmoothScroll, goScrollKeepVisible, goCellEllipsis]
+    RowCount = 12
+    TabOrder = 3
+    ColWidths = (
+      43
+      131
+      251
+      54
+      64
+      45
+    )
+    Cells = (
+      6
+      0
+      0
+      '#id'
+      1
+      0
+      'Tittle'
+      2
+      0
+      'Desc'
+      3
+      0
+      'Size'
+      4
+      0
+      'Cost'
+      5
+      0
+      'Rating'
+    )
+  end
+  object StaticText1: TStaticText
+    Left = 280
+    Height = 32
+    Top = 8
+    Width = 72
+    Caption = 'Pizzas'
+    Font.Height = -24
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object UpDown1: TUpDown
+    Left = 280
+    Height = 31
+    Top = 352
+    Width = 89
+    Enabled = False
+    Min = 0
+    OnClick = UpDown1Click
+    Orientation = udHorizontal
+    Position = 0
+    TabOrder = 5
+  end
+  object StaticText2: TStaticText
+    Left = 256
+    Height = 17
+    Top = 328
+    Width = 136
+    Alignment = taCenter
+    Font.Height = -13
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 440
+    Height = 41
+    Top = 400
+    Width = 176
+    Caption = 'Проверка'
+    OnClick = Button3Click
+    TabOrder = 7
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Text document|*.txt'
+    Left = 24
+    Top = 344
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Text document|*.txt'
+    Left = 56
+    Top = 344
+  end
+  object SaveDialog2: TSaveDialog
+    Filter = 'Text document|*.txt'
+    Left = 88
+    Top = 344
+  end
+  object OpenDialog2: TOpenDialog
+    Filter = 'Text document|*.txt'
+    Left = 128
+    Top = 344
+  end
+end
